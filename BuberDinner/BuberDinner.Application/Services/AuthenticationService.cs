@@ -17,7 +17,7 @@ public class AuthenticationService : IAuthenticationService
     {
         if (_userRepository.GetUserByEmail(email) != null)
         {
-            throw new Exception("User already exists");
+            throw new Exception("User with given email already exists");
         }
         var user = new User
         {
