@@ -6,5 +6,5 @@ Content-Type: application/json
 
 {
     "email":"email@emaiol.com",
-    "password":"password"
+    "password":"passwords"
 }
