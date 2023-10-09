@@ -1,16 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>95c481b1-0a95-43a8-8afa-a489435d9ddf</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\BuberDinner.Contracts\BuberDinner.Contracts.csproj" />
-    <ProjectReference Include="..\BuberDinner.Application\BuberDinner.Application.csproj" />
-    <ProjectReference Include="..\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj" />
+    <ProjectReference Include="..\BuberDinner.Contracts\BuberDinner.Contracts.csproj"/>
+    <ProjectReference Include="..\BuberDinner.Application\BuberDinner.Application.csproj"/>
+    <ProjectReference Include="..\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj"/>
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0"/>
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1"/>
+  </ItemGroup>
 </Project>
