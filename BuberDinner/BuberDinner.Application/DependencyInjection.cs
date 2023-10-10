@@ -1,3 +1,4 @@
+using System.Reflection;
 using BuberDinner.Application.Authentication.Commands.Register;
 using BuberDinner.Application.Authentication.Common;
 using BuberDinner.Application.Common.Behaviors;
@@ -14,7 +15,7 @@ public static class DependencyInjection
         services.AddMediatR(cfg => { cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly); });
         services.AddScoped(typeof(IPipelineBehavior<,>),
         typeof(ValidationBehavior<,>));
-        services.AddScoped<IValidator<RegisterCommand>, RegisterCommandValidator>();
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         return services;
     }
 }
