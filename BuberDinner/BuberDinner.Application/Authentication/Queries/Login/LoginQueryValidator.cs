@@ -7,7 +7,7 @@ namespace BuberDinner.Application.Authentication.Queries.Login
         public LoginQueryValidator()
         {
             RuleFor(x => x.Email).NotEmpty().EmailAddress();
-            RuleFor(x => x.Password).NotEmpty().MinimumLength(16);
+            RuleFor(x => x.Password).NotEmpty();
         }
     }
 }
